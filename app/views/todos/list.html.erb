@@ -1,0 +1,17 @@
+<div class='container'>
+  <div class='row text-center'>
+    <div class='col-md-6'><h1>Tareas por hacer</h1>
+      <br>
+    <% @todos_unmade.each do |unmade| %>
+      <h4><%= unmade.description %></h4>
+    
+    <% end %>
+    </div>
+    <div class='col-md-6'><h1>Tareas completadas</h1>
+      <br>
+    <% @todos_made.each do |made| %>
+      <h4><%= made.description %></h4>
+    <% end %>
+    </div>
+  </div>
+</div>
