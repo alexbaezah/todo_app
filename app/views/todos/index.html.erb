@@ -1,4 +1,20 @@
+<% @todos.each do |todo| %>
+  <div class='card text-center' style=>
+    <div class='card-body'>
+      <h5><%= link_to todo.description, todo_path(todo) %></h5>
+      <% if todo.completed == false %>
+       
+      <% end %>
+    
+    
+
+
 
 
 <div class='text-center'>
   <%= link_to 'Crear nueva tarea', todos_new_path, type: 'button', class: 'btn btn-warning' %>
+ 
+  </div>
+
+   <%= link_to 'Editar', todo_edit_path(todo),type: 'button', class: 'btn btn-secondary' %>
+      <% end %>
