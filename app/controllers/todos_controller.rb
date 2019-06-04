@@ -15,6 +15,15 @@ class TodosController < ApplicationController
         redirect_to todos_path
 
 end
+def show 
+    @todo = Todo.find(params[:id])
+    if @todo.completed == true 
+        @made = 'Tarea completada'
+    else 
+        @made = 'Tarea incompleta' 
+    end
+end
+
 
 private 
 def todo_params
